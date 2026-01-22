@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Lijarcio Merino - CV Interactivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        @media print {
+            .no-print { display: none !important; }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .timeline-dot {
+            transition: all 0.3s ease;
+        }
+        .timeline-item:hover .timeline-dot {
+            background-color: #2563eb;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-100 no-print">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="font-bold text-xl text-slate-900">DL.</span>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                <a href="#" class="hover:text-blue-600 transition-colors">Inicio</a>
+                <a href="#experience" class="hover:text-blue-600 transition-colors">Experiencia</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors">Habilidades</a>
+                <a href="#projects" class="hover:text-blue-600 transition-colors">Proyectos</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-20 pb-12 md:pt-32 md:pb-24 px-6 max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="flex-1 space-y-6 text-center md:text-left animate-fade-in">
+                    <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-2">
+                        Disponible para nuevos proyectos
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight">
+                        Hola, soy <span class="text-blue-600">Diego Lijarcio Merino</span>
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-slate-600 font-medium">
+                        Ingeniero de Software Senior
+                    </h2>
+                    <p class="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto md:mx-0">
+                        Desarrollador Full Stack con más de 8 años de experiencia especializándome en tecnologías web modernas. Apasionado por crear experiencias de usuario fluidas, arquitecturas escalables y soluciones impulsadas por IA. Experto en liderar equipos técnicos y en la entrega continua de productos de alto impacto.
+                    </p>
+                    
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 text-slate-600 mt-4">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>hola@juanperez.dev</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Madrid, España</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                        <a href="mailto:hola@juanperez.dev" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20">
+                            Contáctame
+                        </a>
+                        <button onclick="window.print()" class="px-6 py-3 bg-white border border-slate-200 text-slate-700 rounded-lg font-semibold hover:bg-slate-50 transition-colors flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
+                            Descargar CV
+                        </button>
+                    </div>
+
+                    <div class="flex justify-center md:justify-start gap-6 pt-6 text-slate-400">
+                        <a href="https://github.com/juanperez-demo" target="_blank" class="hover:text-slate-900 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/juanperez-demo" target="_blank" class="hover:text-blue-700 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/juanperez-demo" target="_blank" class="hover:text-blue-400 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="w-48 h-48 md:w-72 md:h-72 flex-shrink-0 relative animate-fade-in">
+                    <div class="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                    <img src="https://picsum.photos/400/400" alt="Diego Lijarcio Merino" class="w-full h-full object-cover rounded-full border-4 border-white shadow-2xl relative z-10">
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 px-6 max-w-4xl mx-auto">
+            <div class="flex items-center gap-3 mb-10">
+                <div class="p-2 bg-blue-100 rounded-lg text-blue-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900">Experiencia Laboral</h2>
+            </div>
+
+            <div class="space-y-12 border-l-2 border-slate-200 ml-3 pl-8 md:pl-12 relative">
+                <!-- Experience 1 -->
+                <div class="relative timeline-item">
+                    <div class="timeline-dot absolute -left-[41px] md:-left-[57px] top-1 w-5 h-5 rounded-full border-4 border-white bg-slate-300 shadow-sm"></div>
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Senior Frontend Engineer</h3>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2021 - Presente</span>
+                    </div>
+                    
+                    <div class="text-lg text-blue-600 font-medium mb-3">TechSolutions Global</div>
+                    <p class="text-slate-600 mb-4">Liderando el equipo de frontend para la plataforma principal SaaS.</p>
+                    
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2 text-slate-600 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
+                            <span>Reduje el tiempo de carga de la aplicación en un 40% migrando a Next.js.</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-slate-600 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
+                            <span>Implementé un sistema de diseño (Design System) utilizado por 5 equipos diferentes.</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-slate-600 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
+                            <span>Mentoricé a 3 desarrolladores junior hasta alcanzar el nivel senior.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="relative timeline-item">
+                    <div class="timeline-dot absolute -left-[41px] md:-left-[57px] top-1 w-5 h-5 rounded-full border-4 border-white bg-slate-300 shadow-sm"></div>
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Full Stack Developer</h3>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2018 - 2021</span>
+                    </div>
+                    
+                    <div class="text-lg text-blue-600 font-medium mb-3">Innovate StartUp</div>
+                    <p class="text-slate-600 mb-4">Desarrollo integral de aplicaciones web para clientes fintech.</p>
+                    
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2 text-slate-600 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
+                            <span>Desarrollé una pasarela de pagos segura procesando >$1M mensuales.</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-slate-600 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
+                            <span>Integré servicios de IA para detección de fraude en tiempo real.</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-slate-600 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
+                            <span>Optimicé las consultas de base de datos reduciendo costos de AWS en un 25%.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="relative timeline-item">
+                    <div class="timeline-dot absolute -left-[41px] md:-left-[57px] top-1 w-5 h-5 rounded-full border-4 border-white bg-slate-300 shadow-sm"></div>
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Junior Web Developer</h3>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2016 - 2018</span>
+                    </div>
+                    
+                    <div class="text-lg text-blue-600 font-medium mb-3">Agencia Creativa Digital</div>
+                    <p class="text-slate-600 mb-4">Creación de sitios web interactivos para campañas de marketing.</p>
+                    
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2 text-slate-600 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
+                            <span>Colaboré en campañas premiadas para marcas internacionales.</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-slate-600 text-sm">
+                            <span class="mt-1.5 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
+                            <span>Implementé animaciones complejas usando GSAP y WebGL.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 px-6 bg-white">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex items-center gap-3 mb-10">
+                    <div class="p-2 bg-purple-100 rounded-lg text-purple-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">Habilidades Técnicas</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Frontend Skills -->
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Frontend</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium text-slate-700">React / Next.js</span>
+                                    <span class="text-sm text-slate-500">95%</span>
+                                </div>
+                                <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                    <div class="h-full bg-blue-600 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium text-slate-700">TypeScript</span>
+                                    <span class="text-sm text-slate-500">90%</span>
+                                </div>
+                                <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                    <div class="h-full bg-indigo-600 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium text-slate-700">Tailwind CSS</span>
+                                    <span class="text-sm text-slate-500">95%</span>
+                                </div>
+                                <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                    <div class="h-full bg-purple-600 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Skills -->
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Backend</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium text-slate-700">Node.js</span>
+                                    <span class="text-sm text-slate-500">85%</span>
+                                </div>
+                                <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                    <div class="h-full bg-green-600 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium text-slate-700">PostgreSQL</span>
+                                    <span class="text-sm text-slate-500">80%</span>
+                                </div>
+                                <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                    <div class="h-full bg-blue-700 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4 mt-8">Tools & Soft Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">Google Cloud / AWS</span>
+                            <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">Git / CI/CD</span>
+                            <span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">Liderazgo de Equipos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 px-6 max-w-6xl mx-auto">
+            <div class="flex items-center gap-3 mb-10">
+                <div class="p-2 bg-green-100 rounded-lg text-green-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900">Proyectos Destacados</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors z-10"></div>
+                        <img src="https://picsum.photos/600/400?random=1" alt="E-commerce Dashboard" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
+                            E-commerce Dashboard
+                        </h3>
+                        
+                        <p class="text-slate-600 text-sm mb-6 flex-1">
+                            Un panel de administración completo para tiendas online con análisis de datos en tiempo real y gestión de inventario.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">React</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">TypeScript</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">Recharts</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">Supabase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors z-10"></div>
+                        <img src="https://picsum.photos/600/400?random=2" alt="AI Chat Assistant" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
+                            AI Chat Assistant
+                        </h3>
+                        
+                        <p class="text-slate-600 text-sm mb-6 flex-1">
+                            Widget de chat integrable que utiliza modelos de lenguaje grandes para soporte al cliente automatizado.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">Node.js</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">WebSockets</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">Gemini API</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">Redis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors z-10"></div>
+                        <img src="https://picsum.photos/600/400?random=3" alt="Health Tracker App" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
+                            Health Tracker App
+                        </h3>
+                        
+                        <p class="text-slate-600 text-sm mb-6 flex-1">
+                            Aplicación móvil progresiva (PWA) para seguimiento de hábitos saludables y visualización de progreso.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">React Native</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">Firebase</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">D3.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center no-print">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="mb-4">&copy; 2025 CV Interactivo. Construido con HTML, CSS y Tailwind.</p>
+            <div class="text-sm text-slate-600">
+                La información presentada es una demostración de currículum profesional.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
