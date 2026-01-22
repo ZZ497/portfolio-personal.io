@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
           '@': path.resolve(__dirname, '.'),
         }
       },
-
+      // Poner de base el repositorio
       base: '/portfolio-personal.io/', 
     };
 });
